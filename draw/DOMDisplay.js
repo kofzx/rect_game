@@ -34,3 +34,11 @@ class DOMDisplay {
 		this.dom.remove();
 	}
 }
+// 同步角色状态（重绘角色）
+DOMDisplay.prototype.syncState = function(state) {
+	if (this.actorLayer) this.actorLayer.remove();
+	this.actorLayer = drawActors(state.actors);
+	this.dom.appendChild(this.actorLayer);
+	this.dom.className = `game ${state.status}`;
+	this.scrollPlayerIntoView(state);
+};
