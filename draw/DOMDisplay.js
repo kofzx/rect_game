@@ -1,4 +1,4 @@
-const { elt } = require('../utils/utils.js')
+import { elt } from '../utils/utils.js'
 
 const scale = 20;
 

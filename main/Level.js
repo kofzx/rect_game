@@ -1,7 +1,5 @@
-// const Vec = require('./Vec.js')
-// const levelChars = require('./levelChars.js')
-import Vec from './Vec.js'
-import levelChars from './levelChars.js'
+import Vec from '../utils/Vec.js'
+import levelChars from '../utils/levelChars.js'
 
 class Level {
 	constructor(plan) {

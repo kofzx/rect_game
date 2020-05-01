@@ -1,4 +1,4 @@
-import Vec from '../Vec.js'
+import Vec from '../utils/Vec.js'
 
 class Coin {
 	constructor(pos, basePos, wobble) {

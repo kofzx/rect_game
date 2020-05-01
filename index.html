@@ -6,6 +6,16 @@
 	<link rel="stylesheet" href="./style/index.css">
 </head>
 <body>
-	<script type="module" src="./Level.js"></script>
+	<script type="module">
+		import { simpleLevelPlan } from './utils/map.js'
+		import Level from './main/Level.js'
+		import DOMDisplay from './draw/DOMDisplay.js'
+		import State from './main/State.js'
+
+		let simpleLevel = new Level(simpleLevelPlan);
+		// 绘制背景
+		let display = new DOMDisplay(document.body, simpleLevel);
+		display.syncState(State.start(simpleLevel));
+	</script>
 </body>
 </html>
