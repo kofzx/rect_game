@@ -1,4 +1,4 @@
-const Vec = require('../Vec.js')
+import Vec from '../Vec.js'
 
 class Lava {
 	constructor(pos, speed, reset) {
@@ -22,4 +22,4 @@ class Lava {
 
 Lava.prototype.size = new Vec(1, 1);
 
-module.exports = Lava;
+export default Lava;

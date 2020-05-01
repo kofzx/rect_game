@@ -1,4 +1,4 @@
-const Vec = require('../Vec.js')
+import Vec from '../Vec.js'
 
 class Coin {
 	constructor(pos, basePos, wobble) {
@@ -19,4 +19,4 @@ class Coin {
 
 Coin.prototype.size = new Vec(0.6, 0.6);
 
-module.exports = Coin;
+export default Coin;

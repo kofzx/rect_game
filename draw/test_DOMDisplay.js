@@ -1,3 +1,3 @@
-const { elt } = require('../utils/utils.js')
+import { elt } from '../utils/utils.js'
 
 elt('div', { class: 'game' }, 123);

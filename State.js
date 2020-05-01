@@ -11,3 +11,5 @@ class State {
 		return this.actions.find(a => a.type === 'player');
 	}
 }
+
+export default State

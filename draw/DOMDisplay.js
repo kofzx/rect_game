@@ -66,3 +66,5 @@ DOMDisplay.prototype.scrollPlayerIntoView = function(state) {
 		this.dom.scrollTop = center.y + margin - height;
 	}
 };
+
+export default DOMDisplay

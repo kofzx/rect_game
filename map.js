@@ -9,6 +9,6 @@ const simpleLevelPlan = `
 ......##############..
 ......................`;
 
-module.exports = {
+export {
 	simpleLevelPlan
 };

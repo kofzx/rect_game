@@ -11,4 +11,4 @@ class Vec {
 	}
 }
 
-module.exports = Vec;
+export default Vec

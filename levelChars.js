@@ -1,6 +1,6 @@
-const Player = require('./actors/Player.js')
-const Coin = require('./actors/Coin.js')
-const Lava = require('./actors/Lava.js')
+import Player from './actors/Player.js'
+import Coin from './actors/Coin.js'
+import Lava from './actors/Lava.js'
 
 const levelChars = {
 	'.': 'empty',
@@ -13,4 +13,4 @@ const levelChars = {
 	'v': Lava,
 };
 
-module.exports = levelChars;
+export default levelChars

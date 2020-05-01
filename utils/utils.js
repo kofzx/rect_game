@@ -9,6 +9,6 @@ function elt(name, attrs, ...children) {
 	return dom;
 }
 
-module.exports = {
+export {
 	elt
 };

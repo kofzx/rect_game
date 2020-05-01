@@ -1,5 +1,7 @@
-const Vec = require('./Vec.js')
-const levelChars = require('./levelChars.js')
+// const Vec = require('./Vec.js')
+// const levelChars = require('./levelChars.js')
+import Vec from './Vec.js'
+import levelChars from './levelChars.js'
 
 class Level {
 	constructor(plan) {
@@ -22,4 +24,4 @@ class Level {
 	}
 }
 
-module.exports = Level;
+export default Level
