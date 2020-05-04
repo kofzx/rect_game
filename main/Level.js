@@ -21,5 +21,25 @@ class Level {
 		});
 	}
 }
+// pos跟size是指定矩形的属性
+// 该方法旨在指定矩形跟其他类型元素的碰撞检测
+Level.prototype.touches = function(pos, size, type) {
+	var xStart = Math.floor(pos.x);
+	var xEnd = Math.ceil(pos.x + size.x);
+	var yStart = Math.floor(pos.y);
+	var yEnd = Math.ceil(pos.y + size.y);
+
+	// 按行遍历
+	for (var y = yStart; y < yEnd; y++) {
+		for (var x = xStart; x < xEnd; x++) {
+			// 是否超出画布边界
+			let isOutside = x < 0 || x >= this.width ||
+							y < 0 || y >= this.height;
+			let here = isOutside ? 'wall' : this.rows[y][x];
+			if (here === type) return true;
+		}
+	}
+	return false;
+};
 
 export default Level

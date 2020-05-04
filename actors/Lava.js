@@ -1,4 +1,5 @@
 import Vec from '../utils/Vec.js'
+import State from '../main/State.js'
 
 class Lava {
 	constructor(pos, speed, reset) {
@@ -19,7 +20,9 @@ class Lava {
 		}
 	}
 }
-
+Lava.prototype.collide = function(state) {
+	return new State(state.level, state.actors, 'lost');
+};
 Lava.prototype.size = new Vec(1, 1);
 
 export default Lava;

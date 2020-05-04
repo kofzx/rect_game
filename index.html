@@ -13,6 +13,7 @@
 		import State from './main/State.js'
 
 		let simpleLevel = new Level(simpleLevelPlan);
+		console.log(simpleLevel);
 		// 绘制背景
 		let display = new DOMDisplay(document.body, simpleLevel);
 		display.syncState(State.start(simpleLevel));
