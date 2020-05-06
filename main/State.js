@@ -13,9 +13,11 @@ class State {
 		return this.actors.find(a => a.type === 'player');
 	}
 }
+// time is time step
+// keys are being held down
 State.prototype.update = function(time, keys) {
 	let actors = this.actors
-		.mao(actor => actor.update(time, this, keys));
+		.map(actor => actor.update(time, this, keys));
 	let newState = new State(this.level, actors, this.status);
 
 	if (newState.status !== 'playing') return newState;

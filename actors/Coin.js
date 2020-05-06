@@ -1,6 +1,8 @@
 import Vec from '../utils/Vec.js'
 import State from '../main/State.js'
 
+const wobbleSpeed = 8, wobbleDist = 0.07;
+
 class Coin {
 	constructor(pos, basePos, wobble) {
 		this.pos = pos;
@@ -16,6 +18,11 @@ class Coin {
 		// Math.sin的波的相位为2PI，我们将Math.random返回的值乘以该数字，以使硬币在波动上具有随机起始位置。
 		return new Coin(basePos, basePos, Math.random() * Math.PI * 2);
 	}
+}
+Coin.prototype.update = function(time) {
+	let wobble = this.wobble + time * wobbleSpeed;
+	let wobblePos = Math.sin(wobble) * wobbleDist;
+	return new Coin(this.basePos.plus(new Vec(0, wobblePos)), this.basePos, wobble);
 }
 Coin.prototype.collide = function(state) {
 	let filtered = state.actors.filter(a => a !== this);

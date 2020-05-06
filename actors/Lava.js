@@ -20,6 +20,14 @@ class Lava {
 		}
 	}
 }
+Lava.prototype.update = function(time, state) {
+	let newPos = this.pos.plus(this.speed.times(time));
+	if (!state.level.touches(newPos, this.size, 'wall')) {
+		return new Lava(newPos, this.speed, this.reset);
+	} else if (this.reset) {
+		return new Lava(this.reset, this.speed.times(-1));
+	}
+};
 Lava.prototype.collide = function(state) {
 	return new State(state.level, state.actors, 'lost');
 };
