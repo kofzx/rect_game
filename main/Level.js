@@ -22,7 +22,7 @@ class Level {
 	}
 }
 // pos跟size是指定矩形的属性
-// 该方法旨在指定矩形跟其他类型元素的碰撞检测
+// 该方法旨在指定位置的矩形跟其他类型元素的碰撞检测
 Level.prototype.touches = function(pos, size, type) {
 	var xStart = Math.floor(pos.x);
 	var xEnd = Math.ceil(pos.x + size.x);
