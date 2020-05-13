@@ -20,7 +20,7 @@ State.prototype.update = function(time, keys) {
 		.map(actor => actor.update(time, this, keys));
 	let newState = new State(this.level, actors, this.status);
 
-	if (newState.status !== 'playing') return newState;
+	if (newState.status != 'playing') return newState;
 
 	let player = newState.player;
 	if (this.level.touches(player.pos, player.size, 'lava')) {
@@ -28,7 +28,7 @@ State.prototype.update = function(time, keys) {
 	}
 
 	for (let actor of actors) {
-		if (actor !== player && overlap(actor, player)) {
+		if (actor != player && overlap(actor, player)) {
 			newState = actor.collide(newState);
 		}
 	}

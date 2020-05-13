@@ -25,9 +25,9 @@ Coin.prototype.update = function(time) {
 	return new Coin(this.basePos.plus(new Vec(0, wobblePos)), this.basePos, wobble);
 }
 Coin.prototype.collide = function(state) {
-	let filtered = state.actors.filter(a => a !== this);
+	let filtered = state.actors.filter(a => a != this);
 	let status = state.status;
-	if (!filtered.some(a => a.type === 'coin')) status = 'won';
+	if (!filtered.some(a => a.type == 'coin')) status = 'won';
 	return new State(state.level, filtered, status);
 };
 Coin.prototype.size = new Vec(0.6, 0.6);

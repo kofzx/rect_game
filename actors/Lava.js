@@ -25,6 +25,8 @@ Lava.prototype.update = function(time, state) {
 	if (!state.level.touches(newPos, this.size, 'wall')) {
 		return new Lava(newPos, this.speed, this.reset);
 	} else if (this.reset) {
+		return new Lava(this.reset, this.speed, this.reset);
+	} else {
 		return new Lava(this.reset, this.speed.times(-1));
 	}
 };

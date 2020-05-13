@@ -13,6 +13,7 @@ function elt(name, attrs, ...children) {
 }
 // 碰撞检测简单实现（边界测试）
 function overlap(actor1, actor2) {
+	console.log(actor1.pos, actor2.pos);
 	return actor1.pos.x + actor1.size.x > actor2.pos.x &&
 		   actor1.pos.x < actor2.pos.x + actor2.size.x &&
 		   actor1.pos.y + actor1.size.y > actor2.pos.y &&
@@ -70,7 +71,7 @@ function runLevel(level, Display) {
 async function runGame(plans, Display) {
 	for (let level = 0; level < plans.length;) {
 		let status = await runLevel(new Level(plans[level]), Display);
-		if (status === 'won') level++;
+		if (status == 'won') level++;
 	}
 	console.log(`You've won!`);
 }
