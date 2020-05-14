@@ -26,8 +26,10 @@ Lava.prototype.update = function(time, state) {
 		return new Lava(newPos, this.speed, this.reset);
 	} else if (this.reset) {
 		return new Lava(this.reset, this.speed, this.reset);
-	} else {
-		return new Lava(this.reset, this.speed.times(-1));
+	} 
+	// 碰到了墙
+	else {
+		return new Lava(this.pos, this.speed.times(-1));
 	}
 };
 Lava.prototype.collide = function(state) {

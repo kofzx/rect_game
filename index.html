@@ -8,10 +8,8 @@
 <body>
 	<script type="module">
 		import { simpleLevelPlan } from './utils/map.js'
-		import { runGame } from './utils/utils.js'
+		import { runGame } from './main/Director.js'
 		import DOMDisplay from './draw/DOMDisplay.js'
-		// import Level from './main/Level.js'
-		// import State from './main/State.js'
 
 		runGame([simpleLevelPlan], DOMDisplay);
 
