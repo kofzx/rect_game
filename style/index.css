@@ -19,20 +19,24 @@
 	background: rgb(241,229,89);
 }
 .player {
-	background: rgb(64,64,64);
+	/*background: rgb(64,64,64);*/
+	background: url("../images/actors/ez_2.png");
+	background-size: 100% 100%;
 }
 .lost .player {
-	background: rgb(160,64,64);
+	/*background: rgb(160,64,64);*/
+	filter: invert(29%) sepia(18%) saturate(3410%) hue-rotate(324deg) brightness(99%) contrast(78%);
 }
 /* 吃到金币，添加光晕效果（左上，右上角添加阴影） */
 .won .player {
+	background-color: #f8f0c1;
 	box-shadow: -4px -7px 8px white, 4px -7px 8px white;
 }
 .monster {
 	background: purple;
 }
 .game {
-	overflow: hidden;
+	/*overflow: hidden;*/
 	max-width: 600px;
 	max-height: 450px;
 	position: relative;

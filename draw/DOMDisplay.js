@@ -1,6 +1,6 @@
 import { elt } from '../utils/utils.js'
 
-const scale = 20;
+const scale = 70;
 
 function drawGrid(level) {
 	return elt('table', {
